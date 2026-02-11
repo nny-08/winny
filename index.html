@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>網頁扭蛋抽獎</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cover" class="page" style="display:block;">
+  <h1>歡迎來到扭蛋抽獎！</h1>
+  <img src="https://via.placeholder.com/300x200?text=封面圖" alt="封面圖">
+  <br><br>
+  <button onclick="gotoCodePage()">進入抽獎</button>
+</div>
+
+<div id="code-page" class="page">
+  <h2>請輸入驗證碼</h2>
+  <input type="text" id="code-input" maxlength="4">
+  <button onclick="verifyCode()">確認</button>
+  <p id="code-msg" style="color:red;"></p>
+</div>
+
+<div id="draw-page" class="page">
+  <h2>扭蛋機抽獎</h2>
+  <img src="https://via.placeholder.com/200x300?text=扭蛋機" alt="扭蛋機">
+  <br><br>
+  <button onclick="draw()">抽獎</button>
+  <p id="status"></p>
+</div>
+
+<div id="draw-result" style="display:none;">
+  <div id="prize-name"></div>
+  <button onclick="closeResult()">再抽一次</button>
+</div>
+
+<audio id="sound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+<script src="script.js"></script>
+</body>
+</html>
